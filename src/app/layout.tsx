@@ -1,4 +1,4 @@
-import { NavBar, SideBar } from '@/components/layout';
+import { NavBar, SideBar } from '@/components/ui';
 import c from 'clsx';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
