@@ -2,7 +2,7 @@ import { Text } from '@/components/elements';
 
 export default function NavBar() {
   return (
-    <nav className="fixed inset-x-0 top-0 w-full border-b border-transparents-300 pl-[220px]">
+    <nav className="fixed inset-x-0 top-0 z-50 w-full bg-white/50 pl-[220px] shadow-navbar backdrop-blur-[20px]">
       <div className="mx-auto flex w-full items-center justify-between px-6 py-5">
         <Text size="14" weight="medium">
           Invoicing

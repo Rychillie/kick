@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function SideBar() {
   return (
-    <aside className="fixed inset-y-0 left-0 size-full max-w-[219px] border-r border-transparents-300 bg-gray-50">
+    <aside className="fixed inset-y-0 left-0 z-50 size-full max-w-[219px] border-r border-transparents-300 bg-gray-50">
       <div className="flex w-full items-center border-b border-transparents-300 px-3 py-4">
         <div className="flex w-full items-center gap-3.5 px-2.5 py-1.5">
           <Image

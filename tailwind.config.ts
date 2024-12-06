@@ -8,7 +8,8 @@ export default {
         sans: ['var(--font-inter)']
       },
       boxShadow: {
-        input: '0px 0px 0px 2px #E2F0FB'
+        input: '0px 0px 0px 2px #E2F0FB',
+        navbar: '0px 1px 0px 0px rgba(83, 100, 126, 0.13)',
       },
       colors: {
         transparents: {

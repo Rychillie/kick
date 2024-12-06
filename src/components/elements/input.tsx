@@ -37,8 +37,8 @@ export default function Input(
           'outline-none hover:border-gray-400 focus:outline-none',
           'focus:border-blue-400 focus:shadow-input',
           !icon ? 'px-3' : iconPosition === 'left' ? 'pl-9 pr-3' : 'pl-3 pr-9',
-          height === 'sm' && 'h-10 py-1.5',
-          height === 'base' && 'h-12 py-1.5',
+          height === 'sm' && 'h-8 py-1.5',
+          height === 'base' && 'h-10 py-1.5',
           className
         )}
         ref={ref}

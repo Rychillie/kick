@@ -2,13 +2,21 @@ import { Button, Input } from '@/components/elements';
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
-      <h1 className="text-2xl font-bold">Under development</h1>
+    <div className="flex w-full flex-col gap-6 overflow-scroll p-6">
+      <div className="flex items-center justify-between rounded-xl border border-transparents-400 p-4">
+        <div className='flex items-center justify-center gap-3'>
+          <Input placeholder="Username" />
+          <Button intent='secondary'>Add filter</Button>
+        </div>
 
-      <div className="flex gap-3">
-        <Input placeholder="Username" />
-        <Input placeholder="Account" icon="accounts" />
-        <Button size='lg' icon='bank' intent='action' iconPosition='right'>Submit</Button>
+        <div className='flex items-center justify-center gap-3'>
+          <Button intent='secondary'>5 entities</Button>
+          <Button>Create Invoice</Button>
+        </div>
+      </div>
+
+      <div className='flex h-screen w-full items-center justify-between rounded-xl border border-transparents-400 p-4'>
+
       </div>
     </div>
   );
