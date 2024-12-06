@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function SideBar() {
   return (
-    <aside className="fixed inset-y-0 left-0 z-50 size-full max-w-[219px] border-r border-transparents-300 bg-gray-50">
-      <div className="flex w-full items-center border-b border-transparents-300 px-3 py-4">
+    <aside className="fixed inset-y-0 left-0 z-50 flex h-svh w-full max-w-[220px] items-start justify-start border-r border-transparents-300 bg-gray-50">
+      <div className="flex w-full flex-1 items-center border-b border-transparents-300 px-3 py-4">
         <div className="flex w-full items-center gap-3.5 px-2.5 py-1.5">
           <Image
             src="/company-Icon.png"
@@ -17,7 +17,9 @@ export default function SideBar() {
             Matt Peterson
           </Text>
 
-          <Icon name="chevron-down" className="size-2" width={8} height={8} />
+          <div className="flex aspect-square size-full max-w-2.5 items-center justify-center">
+            <Icon name="chevron-down" className="w-full" />
+          </div>
         </div>
       </div>
     </aside>

@@ -6,7 +6,9 @@ export type IconName =
   | 'billing'
   | 'chevron-down'
   | 'document'
-  | 'graph';
+  | 'filter'
+  | 'graph'
+  | 'search';
 
 export type IconProps = {
   name: IconName;
@@ -145,12 +147,32 @@ export default function Icon({
           {...rest}
         >
           <path
-            d="M1 2.5L4 5.5L7 2.5"
+            d="M3 6L8 11L13 6"
             stroke="currentColor"
+            strokeWidth="1.25"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
+
+        // <svg
+        //   className={className}
+        //   height={height}
+        //   width={width}
+        //   aria-label={ariaLabel || 'Chevron Down Icon'}
+        //   aria-hidden={ariaHidden}
+        //   fill="none"
+        //   viewBox={`0 0 ${width} ${height}`}
+        //   xmlns="http://www.w3.org/2000/svg"
+        //   {...rest}
+        // >
+        //   <path
+        //     d="M1 2.5L4 5.5L7 2.5"
+        //     stroke="currentColor"
+        //     strokeLinecap="round"
+        //     strokeLinejoin="round"
+        //   />
+        // </svg>
       );
     case 'document':
       return (
@@ -174,6 +196,27 @@ export default function Icon({
           />
         </svg>
       );
+    case 'filter':
+      return (
+        <svg
+          className={className}
+          height={height}
+          width={width}
+          aria-label={ariaLabel || 'Filter Icon'}
+          aria-hidden={ariaHidden}
+          fill="none"
+          viewBox={`0 0 ${width} ${height}`}
+          xmlns="http://www.w3.org/2000/svg"
+          {...rest}
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M6 2.625C5.24061 2.625 4.625 3.24061 4.625 4C4.625 4.75939 5.24061 5.375 6 5.375C6.75939 5.375 7.375 4.75939 7.375 4C7.375 3.24061 6.75939 2.625 6 2.625ZM1.5 3.375H3.44986C3.73025 2.227 4.76563 1.375 6 1.375C7.23437 1.375 8.26975 2.227 8.55014 3.375H14.5C14.8452 3.375 15.125 3.65482 15.125 4C15.125 4.34518 14.8452 4.625 14.5 4.625H8.55014C8.26975 5.773 7.23437 6.625 6 6.625C4.76563 6.625 3.73025 5.773 3.44986 4.625H1.5C1.15482 4.625 0.875 4.34518 0.875 4C0.875 3.65482 1.15482 3.375 1.5 3.375ZM14.5 11.375C14.8452 11.375 15.125 11.6548 15.125 12C15.125 12.3452 14.8452 12.625 14.5 12.625H12.5501C12.2697 13.773 11.2344 14.625 10 14.625C8.76563 14.625 7.73025 13.773 7.44986 12.625H1.5C1.15482 12.625 0.875 12.3452 0.875 12C0.875 11.6548 1.15482 11.375 1.5 11.375H7.44986C7.73025 10.227 8.76563 9.375 10 9.375C11.2344 9.375 12.2697 10.227 12.5501 11.375H14.5ZM11.375 12C11.375 11.2406 10.7594 10.625 10 10.625C9.24061 10.625 8.625 11.2406 8.625 12C8.625 12.7594 9.24061 13.375 10 13.375C10.7594 13.375 11.375 12.7594 11.375 12Z"
+            fill="currentColor"
+          />
+        </svg>
+      );
     case 'graph':
       return (
         <svg
@@ -189,6 +232,28 @@ export default function Icon({
         >
           <path
             d="M0.75 15H15.25M5.83333 8.00024H3.16667C2.99057 8.00354 2.82234 8.10517 2.69781 8.28347C2.57328 8.46177 2.5023 8.70265 2.5 8.95479V15.0002H6.5V8.95479C6.5 8.70163 6.42976 8.45884 6.30474 8.27982C6.17971 8.10081 6.01014 8.00024 5.83333 8.00024ZM12.8333 1H10.1667C9.99057 1.0029 9.82234 1.09233 9.69781 1.24924C9.57328 1.40614 9.5023 1.61812 9.5 1.84V15H13.5V1.84C13.5 1.61722 13.4298 1.40356 13.3047 1.24603C13.1797 1.0885 13.0101 1 12.8333 1Z"
+            stroke="currentColor"
+            strokeWidth="1.25"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case 'search':
+      return (
+        <svg
+          className={className}
+          height={height}
+          width={width}
+          aria-label={ariaLabel || 'Search Icon'}
+          aria-hidden={ariaHidden}
+          fill="none"
+          viewBox={`0 0 ${width} ${height}`}
+          xmlns="http://www.w3.org/2000/svg"
+          {...rest}
+        >
+          <path
+            d="M10.5951 10.5952L14.6661 14.6667M2.05293 8.93694C2.59743 10.2182 3.6286 11.2306 4.91958 11.7515C6.21056 12.2725 7.6556 12.2592 8.93682 11.7147C10.218 11.1702 11.2305 10.1391 11.7514 8.84807C12.2723 7.55709 12.2591 6.11205 11.7146 4.83083C11.1701 3.54962 10.1389 2.53718 8.84795 2.01624C7.55697 1.49531 6.11192 1.50855 4.83071 2.05305C3.54949 2.59756 2.53705 3.62872 2.01612 4.9197C1.49519 6.21068 1.50843 7.65573 2.05293 8.93694Z"
             stroke="currentColor"
             strokeWidth="1.25"
             strokeLinecap="round"

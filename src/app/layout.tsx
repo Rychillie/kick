@@ -21,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="size-full bg-white text-black">
-      <body className={c(inter.className, 'w-full h-svh pt-16 pl-[220px] antialiased')}>
+      <body
+        className={c(
+          inter.className,
+          'h-svh w-full pl-[220px] pt-16 antialiased'
+        )}
+      >
         <NavBar />
         <SideBar />
         <main className="flex h-auto w-full items-center justify-center">
