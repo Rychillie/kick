@@ -1,4 +1,4 @@
-import { Button } from '@/components/elements';
+import { Button, Input } from '@/components/elements';
 
 export default function Home() {
   return (
@@ -6,28 +6,9 @@ export default function Home() {
       <h1 className="text-2xl font-bold">Under development</h1>
 
       <div className="flex gap-3">
-        <Button intent="tertiary" className="w-fit" disabled size="lg">
-          Button
-        </Button>
-        <Button intent="tertiary" className="w-fit" icon="document" size="lg">
-          Button
-        </Button>
-        <Button
-          intent="tertiary"
-          className="w-fit"
-          icon="document"
-          size="lg"
-          iconPosition="right"
-        >
-          Button
-        </Button>
-        <Button
-          intent="tertiary"
-          className="w-fit"
-          icon="actions"
-          size="lg"
-          onlyIcon
-        />
+        <Input placeholder="Username" />
+        <Input placeholder="Account" icon="accounts" />
+        <Button size='lg' icon='bank' intent='action' iconPosition='right'>Submit</Button>
       </div>
     </div>
   );

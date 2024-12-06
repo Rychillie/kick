@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         sans: ['var(--font-inter)']
       },
+      boxShadow: {
+        input: '0px 0px 0px 2px #E2F0FB'
+      },
       colors: {
         transparents: {
           100: 'rgba(77, 99, 132, 0.06)',
