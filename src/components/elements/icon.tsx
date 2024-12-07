@@ -4,6 +4,7 @@ export type IconName =
   | 'activity'
   | 'bank'
   | 'billing'
+  | 'check'
   | 'chevron-down'
   | 'document'
   | 'filter'
@@ -133,6 +134,28 @@ export default function Icon({
           />
         </svg>
       );
+    case 'check':
+      return (
+        <svg
+          className={className}
+          height={height}
+          width={width}
+          aria-label={ariaLabel || 'Chevron Down Icon'}
+          aria-hidden={ariaHidden}
+          fill="none"
+          viewBox={`0 0 ${width} ${height}`}
+          xmlns="http://www.w3.org/2000/svg"
+          {...rest}
+        >
+          <path
+            d="M1.5 6.2L4.3 9L10.3 3"
+            stroke="white"
+            strokeWidth="1.25"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
     case 'chevron-down':
       return (
         <svg
@@ -154,25 +177,6 @@ export default function Icon({
             strokeLinejoin="round"
           />
         </svg>
-
-        // <svg
-        //   className={className}
-        //   height={height}
-        //   width={width}
-        //   aria-label={ariaLabel || 'Chevron Down Icon'}
-        //   aria-hidden={ariaHidden}
-        //   fill="none"
-        //   viewBox={`0 0 ${width} ${height}`}
-        //   xmlns="http://www.w3.org/2000/svg"
-        //   {...rest}
-        // >
-        //   <path
-        //     d="M1 2.5L4 5.5L7 2.5"
-        //     stroke="currentColor"
-        //     strokeLinecap="round"
-        //     strokeLinejoin="round"
-        //   />
-        // </svg>
       );
     case 'document':
       return (
