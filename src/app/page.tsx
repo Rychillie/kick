@@ -1,4 +1,4 @@
-import { Button, Checkbox, Input } from '@/components/elements';
+import { Button, Checkbox, Input, Tag } from '@/components/elements';
 import {
   Table,
   TableBody,
@@ -11,7 +11,7 @@ import { invoices } from '@/constants';
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col gap-6 overflow-scroll p-6">
+    <div className="flex size-full flex-col gap-6 overflow-scroll p-6">
       <div className="flex items-center justify-between overflow-hidden rounded-xl border border-transparents-400 p-4">
         <div className="flex items-center justify-center gap-3">
           <Input icon="search" placeholder="Search..." />
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex h-screen w-full overflow-hidden rounded-xl border border-transparents-400">
+      <div className="flex size-full max-h-full min-h-fit overflow-hidden rounded-xl border border-transparents-400">
         <Table className="relative">
           <TableHeader>
             <TableRow>
@@ -57,7 +57,17 @@ export default function Home() {
                 </TableCell>
                 <TableCell>{invoice.dueDate}</TableCell>
                 <TableCell className="min-w-[103px]">
-                  {invoice.status}
+                  <Tag
+                    indent={
+                      invoice.status === 'Paid'
+                        ? 'Outline-Blue'
+                        : invoice.status === 'Overdue'
+                          ? 'Outline-Yellow'
+                          : 'Outline-Gray'
+                    }
+                  >
+                    {invoice.status}
+                  </Tag>
                 </TableCell>
                 <TableCell className="w-full min-w-56">
                   {invoice.customer}
@@ -66,7 +76,7 @@ export default function Home() {
                   {invoice.invoiceNo}
                 </TableCell>
                 <TableCell className="text-right">
-                  {invoice.invoiceNo}
+                  {invoice.invoiceDate}
                 </TableCell>
                 <TableCell className="text-right">{invoice.amount}</TableCell>
               </TableRow>

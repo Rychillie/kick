@@ -48,14 +48,14 @@ interface TextProps
 }
 
 // Text Component
-const Text: React.FC<TextProps> = ({
+export default function Text({
   as: Component = 'span',
   children,
   className,
   size,
   weight,
   ...props
-}) => {
+}: TextProps) {
   return (
     <Component
       className={c(
@@ -70,6 +70,4 @@ const Text: React.FC<TextProps> = ({
       {children}
     </Component>
   );
-};
-
-export default Text;
+}
