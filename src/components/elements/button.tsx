@@ -16,7 +16,14 @@ export const buttonVariants = cva(
           'hover:bg-gray-800',
           'active:bg-gray-700',
           'disabled:bg-gray-300',
-          'disabled:text-gray-500'
+          'disabled:text-gray-500',
+
+          'dark:bg-white',
+          'dark:text-black',
+          'dark:hover:bg-gray-100',
+          'dark:active:bg-gray-300',
+          'dark:disabled:bg-neutral-900/40',
+          'dark:disabled:text-gray-300'
         ],
         action: [
           'bg-blue-600',
@@ -24,7 +31,13 @@ export const buttonVariants = cva(
           'hover:bg-blue-700',
           'active:bg-blue-800',
           'disabled:bg-gray-300',
-          'disabled:text-gray-500'
+          'disabled:text-gray-500',
+          'dark:bg-blue-800',
+          'dark:text-white',
+          'dark:hover:bg-blue-700',
+          'dark:active:bg-blue-600',
+          'dark:disabled:bg-gray-900',
+          'dark:disabled:text-gray-500'
         ],
         secondary: [
           'border',
@@ -36,13 +49,26 @@ export const buttonVariants = cva(
           'active:bg-gray-50',
           'disabled:bg-white',
           'disabled:text-gray-400',
-          'disabled:border-transparents-400'
+          'disabled:border-transparents-400',
+          'dark:bg-black',
+          'dark:text-gray-200',
+          'dark:border-neutral-900',
+          'dark:hover:border-gray-800',
+          'dark:active:border-gray-700',
+          'dark:active:bg-gray-900',
+          'dark:disabled:bg-neutral-900',
+          'dark:disabled:text-gray-500',
+          'dark:disabled:border-neutral-800'
         ],
         tertiary: [
           'text-gray-900',
           'hover:bg-transparents-200',
           'active:text-gray-700',
-          'active:bg-transparents-300'
+          'active:bg-transparents-300',
+          'dark:text-gray-100',
+          'dark:hover:bg-neutral-800',
+          'dark:active:text-gray-300',
+          'dark:active:bg-neutral-700'
         ]
       },
       size: {

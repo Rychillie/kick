@@ -1,4 +1,4 @@
-import { NavBar, SideBar } from '@/components/ui';
+import { NavBar } from '@/components/ui';
 import c from 'clsx';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -20,15 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="size-full bg-white text-black">
+    <html
+      lang="en"
+      className="size-full bg-white text-black dark:bg-black dark:text-white"
+    >
       <body
         className={c(
           inter.className,
-          'h-svh w-full pl-[220px] pt-16 antialiased'
+          'mx-auto h-svh w-full max-w-5xl pt-16 antialiased'
         )}
       >
         <NavBar />
-        <SideBar />
         <main className="flex h-auto w-full items-center justify-center">
           {children}
         </main>

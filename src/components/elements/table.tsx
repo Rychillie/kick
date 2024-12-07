@@ -29,7 +29,7 @@ const TableHeader = forwardRef<
   <thead
     ref={ref}
     className={c(
-      'border-transparents-300 bg-white text-neutral-700 [&_tr]:border-b',
+      'dark: border-transparents-300 bg-white text-neutral-700 dark:border-neutral-900 dark:bg-black dark:text-neutral-300 [&_tr]:border-b',
       className
     )}
     {...props}
@@ -44,7 +44,7 @@ const TableBody = forwardRef<
   <tbody
     ref={ref}
     className={c(
-      'text-sm font-medium text-gray-900 [&_tr:last-child]:border-0',
+      'text-sm font-medium text-gray-900 dark:text-neutral-50 [&_tr:last-child]:border-0',
       className
     )}
     {...props}
@@ -59,7 +59,7 @@ const TableFooter = forwardRef<
   <tfoot
     ref={ref}
     className={c(
-      'bg-muted/50 border-t border-transparents-300 font-medium [&>tr]:last:border-b-0',
+      'bg-muted/50 border-t border-transparents-300 font-medium dark:border-neutral-900 [&>tr]:last:border-b-0',
       className
     )}
     {...props}
@@ -74,7 +74,7 @@ const TableRow = forwardRef<
   <tr
     ref={ref}
     className={c(
-      'hover:bg-muted/50 data-[state=selected]:bg-muted border-b border-transparents-300 transition-colors',
+      'hover:bg-muted/50 data-[state=selected]:bg-muted border-b border-transparents-300 transition-colors dark:border-neutral-900',
       className
     )}
     {...props}
