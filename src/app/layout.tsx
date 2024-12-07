@@ -27,11 +27,11 @@ export default function RootLayout({
       <body
         className={c(
           inter.className,
-          'mx-auto h-svh w-full max-w-5xl pt-16 antialiased'
+          'mx-auto size-full max-w-5xl pt-16 antialiased'
         )}
       >
         <NavBar />
-        <main className="flex h-auto w-full items-center justify-center">
+        <main className="flex size-full items-center justify-center">
           {children}
         </main>
       </body>

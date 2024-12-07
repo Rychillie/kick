@@ -1,7 +1,19 @@
 import { Checkbox, Table as T, Tag } from '@/components/elements';
-import { invoices } from '@/constants';
+import type { Invoices } from '@/types/invoice';
 
-export default function TableBody() {
+export default function TableBody({ invoices }: { invoices?: Invoices }) {
+  if (!invoices) {
+    return (
+      <T.TableBody>
+        <T.TableRow>
+          <T.TableCell colSpan={7} className="text-center">
+            No invoices found
+          </T.TableCell>
+        </T.TableRow>
+      </T.TableBody>
+    );
+  }
+
   return (
     <T.TableBody>
       {invoices.map((invoice, i) => (

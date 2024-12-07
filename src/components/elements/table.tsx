@@ -8,11 +8,11 @@ import {
 
 const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(
   ({ className, ...props }, ref) => (
-    <div className="relative w-full overflow-auto">
+    <div className="relative size-full overflow-auto">
       <table
         ref={ref}
         className={c(
-          'w-full caption-bottom text-nowrap text-xs leading-[18px]',
+          'size-full caption-bottom text-nowrap text-xs leading-[18px]',
           className
         )}
         {...props}

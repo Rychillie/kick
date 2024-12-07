@@ -1,15 +1,16 @@
 'use client';
 
 import { Table as TableContainer } from '@/components/elements/table';
+import type { Invoices } from '@/types/invoice';
 import TableBody from './table-body';
 import TableHeader from './table-header';
 
-export default function Table() {
+export default function Table({ invoices }: { invoices?: Invoices }) {
   return (
-    <div className="flex size-full max-h-full min-h-fit overflow-hidden rounded-xl border border-transparents-400 dark:border-neutral-900">
+    <div className="flex size-full overflow-hidden rounded-xl border border-transparents-400 dark:border-neutral-900">
       <TableContainer className="relative">
         <TableHeader />
-        <TableBody />
+        <TableBody invoices={invoices} />
       </TableContainer>
     </div>
   );

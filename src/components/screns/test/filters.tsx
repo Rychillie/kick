@@ -4,7 +4,13 @@ import { Button, Input } from '@/components/elements';
 import { useMediaQuery } from '@/lib/hooks';
 
 export default function Filters() {
-  const { isDesktop } = useMediaQuery();
+  const { isDesktop, device } = useMediaQuery();
+
+  if (device === null) {
+    return (
+      <div className="flex h-[154px] w-full animate-pulse rounded-xl bg-neutral-200/40 lg:h-[66px] dark:bg-neutral-900/50" />
+    );
+  }
 
   return (
     <div className="flex flex-col items-center justify-center gap-3 overflow-hidden rounded-xl border border-transparents-400 p-4 lg:flex-row lg:justify-between dark:border-neutral-900">

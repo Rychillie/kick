@@ -1,2 +1,2 @@
-export { default as Filters } from './filtes';
+export { default as Filters } from './filters';
 export { default as Table } from './table';
