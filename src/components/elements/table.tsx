@@ -12,7 +12,7 @@ const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(
       <table
         ref={ref}
         className={c(
-          'size-full caption-bottom text-nowrap text-xs leading-[18px]',
+          'h-auto w-full caption-bottom text-nowrap text-xs leading-[18px]',
           className
         )}
         {...props}

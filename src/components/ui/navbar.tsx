@@ -13,11 +13,9 @@ export default function NavBar({ user }: { user: User | null }) {
 
   const { SignInModal, setShowSignInModal } = useSignInModal();
 
-  console.log(user);
-
   const routes = [
     { name: 'Invoices', path: '/invoices' },
-    { name: 'Customers', path: '#' }
+    { name: 'Customers', path: '/customers' }
   ];
 
   return (
