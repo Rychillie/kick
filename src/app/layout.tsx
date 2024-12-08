@@ -31,7 +31,7 @@ export default function RootLayout({
         )}
       >
         <NavBar />
-        <main className="flex size-full items-center justify-center">
+        <main className="flex w-full min-h-full h-auto items-center justify-center">
           {children}
         </main>
       </body>

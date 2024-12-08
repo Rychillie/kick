@@ -1,9 +1,9 @@
 import { Test } from '@/components/screns';
 import { EmptyState } from '@/components/ui';
-// import { invoices } from '@/constants';
+import { invoices } from '@/constants';
 
 export default function InvoicesPage() {
-  const invoices = null;
+  // const invoices = null;
 
   return (
     <div className="flex size-full flex-col gap-6 overflow-scroll p-6">
