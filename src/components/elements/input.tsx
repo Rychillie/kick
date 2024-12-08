@@ -20,9 +20,7 @@ export default function Input(
   ref: React.Ref<HTMLInputElement>
 ) {
   return (
-    <div
-      className={c('relative text-gray-900 dark:text-neutral-50', className)}
-    >
+    <div className={c('relative text-gray-900 dark:text-gray-50', className)}>
       {icon && iconPosition === 'left' && (
         <Icon
           name={icon}
@@ -34,7 +32,7 @@ export default function Input(
       <input
         type={type}
         className={c(
-          'rounded-lg border border-transparents-400 bg-white text-sm text-gray-900 placeholder-gray-500 shadow-transparent outline-none transition-all hover:border-gray-400 focus:border-blue-400 focus:shadow-input focus:outline-none dark:border-neutral-900 dark:bg-black dark:text-gray-100 dark:placeholder-gray-400 dark:hover:border-gray-800 dark:focus:border-blue-900 dark:focus:shadow-input-inverted',
+          'rounded-lg border border-transparents-400 bg-white text-sm text-gray-900 placeholder-gray-500 shadow-transparent outline-none transition-all hover:border-gray-400 focus:border-blue-400 focus:shadow-input focus:outline-none dark:border-gray-900 dark:bg-black dark:text-gray-100 dark:placeholder-gray-400 dark:hover:border-gray-800 dark:focus:border-blue-900 dark:focus:shadow-input-inverted',
           !icon ? 'px-3' : iconPosition === 'left' ? 'pl-9 pr-3' : 'pl-3 pr-9',
           height === 'sm' && 'h-8 py-1.5',
           height === 'base' && 'h-10 py-1.5',

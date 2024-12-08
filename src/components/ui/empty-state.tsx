@@ -17,7 +17,7 @@ export default function EmptyState({
         <Text as="h1" weight="semibold" size="24">
           {title}
         </Text>
-        <Text size="16-24" className="text-neutral-600 dark:text-neutral-300">
+        <Text size="16-24" className="text-gray-600 dark:text-gray-300">
           {description}
         </Text>
       </div>

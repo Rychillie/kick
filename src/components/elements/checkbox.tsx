@@ -16,7 +16,7 @@ const Checkbox = forwardRef<
   <CheckboxPrimitive.Root
     ref={ref}
     className={c(
-      'h-4 w-4 shrink-0 rounded border border-transparents-400 bg-white text-transparent outline-none transition-all hover:border-gray-400 focus-visible:outline-none disabled:cursor-not-allowed data-[state=checked]:border-transparent data-[state=checked]:bg-blue-600 data-[state=checked]:text-white data-[state=checked]:hover:bg-blue-700 dark:border-neutral-700/50 dark:bg-neutral-900/50 dark:hover:border-neutral-600 dark:data-[state=checked]:hover:border-blue-500',
+      'h-4 w-4 shrink-0 rounded border border-transparents-400 bg-white text-transparent outline-none transition-all hover:border-gray-400 focus-visible:outline-none disabled:cursor-not-allowed data-[state=checked]:border-transparent data-[state=checked]:bg-blue-600 data-[state=checked]:text-white data-[state=checked]:hover:bg-blue-700 dark:border-gray-700/50 dark:bg-gray-900/50 dark:hover:border-gray-600 dark:data-[state=checked]:hover:border-blue-500',
       className
     )}
     {...props}

@@ -1,4 +1,4 @@
-import { NavBar } from '@/components/ui';
+import Nav from '@/components/ui/nav';
 import c from 'clsx';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -24,14 +24,10 @@ export default function RootLayout({
       lang="en"
       className="size-full bg-white text-black dark:bg-black dark:text-white"
     >
-      <body
-        className={c(
-          inter.className,
-          'mx-auto size-full max-w-5xl pt-16 antialiased'
-        )}
-      >
-        <NavBar />
-        <main className="flex h-auto min-h-full w-full items-center justify-center">
+      <body className={c(inter.className, 'size-full antialiased')}>
+        {/* @ts-expect-error Server Component */}
+        <Nav />
+        <main className="mx-auto flex h-auto min-h-full w-full max-w-5xl items-center justify-center pt-16">
           {children}
         </main>
       </body>
