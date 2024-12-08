@@ -8,26 +8,17 @@ const tagVariants = cva(
   {
     variants: {
       indent: {
-        'Filled-Blue':
-          'border-blue-200 bg-blue-200 text-blue-700 dark:border-blue-700 dark:bg-blue-700 dark:text-blue-200',
-        'Outline-Blue':
-          'border-blue-300 text-blue-600 dark:border-blue-600 dark:text-blue-300',
-        'Filled-Red':
-          'border-red-200 bg-red-200 text-red-700 dark:border-red-700 dark:bg-red-700 dark:text-red-200',
-        'Outline-Red':
-          'border-red-300 text-red-600 dark:border-red-600 dark:text-red-300',
-        'Filled-Yellow':
-          'border-yellow-200 bg-yellow-200 text-yellow-700 dark:border-yellow-700 dark:bg-yellow-700 dark:text-yellow-200',
-        'Outline-Yellow':
-          'border-yellow-300 text-yellow-600 dark:border-yellow-600 dark:text-yellow-300',
-        'Filled-Gray':
-          'border-gray-200 bg-gray-200 text-gray-700 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-200',
-        'Outline-Gray':
-          'border-gray-300 text-gray-600 dark:border-gray-600 dark:text-gray-300',
+        'Filled-Blue': 'border-blue-200 bg-blue-200 text-blue-700',
+        'Outline-Blue': 'border-blue-300 text-blue-600',
+        'Filled-Red': 'border-red-200 bg-red-200 text-red-700',
+        'Outline-Red': 'border-red-300 text-red-600',
+        'Filled-Yellow': 'border-yellow-200 bg-yellow-200 text-yellow-700',
+        'Outline-Yellow': 'border-yellow-300 text-yellow-600',
+        'Filled-Gray': 'border-gray-200 bg-gray-200 text-gray-700',
+        'Outline-Gray': 'border-gray-300 text-gray-600',
         'Filled-Disabled':
-          'border-transparent bg-transparents-200 text-gray-500 dark:bg-transparents-200 dark:text-gray-500',
-        'Outline-Disabled':
-          'border-transparents-400 text-gray-500 dark:border-transparents-100 dark:text-gray-500'
+          'border-transparent bg-transparents-200 text-gray-500',
+        'Outline-Disabled': 'border-transparents-400 text-gray-500'
       },
       size: {
         sm: 'text-[10px] font-semibold leading-4',

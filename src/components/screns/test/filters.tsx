@@ -8,12 +8,12 @@ export default function Filters() {
 
   if (device === null) {
     return (
-      <div className="flex h-[154px] w-full animate-pulse rounded-xl bg-gray-200/40 lg:h-[66px] dark:bg-gray-900/50" />
+      <div className="flex h-[154px] w-full animate-pulse rounded-xl bg-gray-200/40 lg:h-[66px]" />
     );
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-3 overflow-hidden rounded-xl border border-transparents-400 p-4 lg:flex-row lg:justify-between dark:border-gray-900">
+    <div className="flex flex-col items-center justify-center gap-3 overflow-hidden rounded-xl border border-transparents-400 p-4 lg:flex-row lg:justify-between">
       {isDesktop ? (
         <>
           <div className="flex items-center justify-center gap-3">

@@ -12,7 +12,7 @@ export default function Separator({
   return (
     <hr
       className={c(
-        'border-none bg-transparents-300 dark:bg-gray-800',
+        'border-none bg-transparents-300',
         vertical ? 'h-full min-h-4 w-px' : 'h-px w-full min-w-4',
         className
       )}

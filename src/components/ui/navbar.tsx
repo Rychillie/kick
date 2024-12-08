@@ -23,12 +23,12 @@ export default function NavBar({ user }: { user: User | null }) {
   return (
     <>
       <SignInModal />
-      <nav className="fixed inset-x-0 top-0 z-40 w-full bg-white/50 shadow-navbar backdrop-blur-[20px] dark:border-b dark:border-gray-900 dark:bg-black/50 dark:shadow-none">
+      <nav className="fixed inset-x-0 top-0 z-40 w-full bg-white/50 shadow-navbar backdrop-blur-[20px]">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-5">
           <div className="flex items-center justify-center gap-2">
             <Link
               href="/"
-              className="cursor-pointer transition-colors hover:text-gray-800 dark:hover:text-gray-200"
+              className="cursor-pointer transition-colors hover:text-gray-800"
             >
               <Text size="14" weight="semibold">
                 Kick
@@ -37,7 +37,7 @@ export default function NavBar({ user }: { user: User | null }) {
 
             <Separator className="mx-2" vertical />
 
-            <div className="flex gap-2 text-gray-700 dark:text-gray-400">
+            <div className="flex gap-2 text-gray-700">
               {routes.map((route, index) => (
                 <Link
                   href={route.path}
@@ -45,8 +45,8 @@ export default function NavBar({ user }: { user: User | null }) {
                   className={c(
                     'transition-all',
                     pathname === route.path
-                      ? 'cursor-default text-gray-900 dark:text-gray-50'
-                      : 'cursor-pointer hover:text-gray-800 dark:hover:text-gray-200'
+                      ? 'cursor-default text-gray-900'
+                      : 'cursor-pointer hover:text-gray-800'
                   )}
                 >
                   <Text size="14" weight="medium">
@@ -61,7 +61,11 @@ export default function NavBar({ user }: { user: User | null }) {
             {user ? (
               <UserDropdown user={user} />
             ) : (
-              <Button intent="primary" onClick={() => setShowSignInModal(true)}>
+              <Button
+                size="sm"
+                intent="primary"
+                onClick={() => setShowSignInModal(true)}
+              >
                 Sign In
               </Button>
             )}

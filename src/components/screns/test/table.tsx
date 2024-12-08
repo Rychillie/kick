@@ -7,7 +7,7 @@ import TableHeader from './table-header';
 
 export default function Table({ invoices }: { invoices?: Invoices }) {
   return (
-    <div className="flex size-full overflow-hidden rounded-xl border border-transparents-400 dark:border-gray-900">
+    <div className="flex size-full overflow-hidden rounded-xl border border-transparents-400">
       <TableContainer className="relative">
         <TableHeader />
         <TableBody invoices={invoices} />

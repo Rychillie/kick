@@ -1,5 +1,3 @@
-import { signout } from '@/actions';
-import { Button } from '@/components/elements';
 import { Test } from '@/components/screns';
 import { EmptyState } from '@/components/ui';
 import { invoices } from '@/constants';
@@ -17,7 +15,6 @@ export default async function InvoicesPage() {
 
   return (
     <div className="flex size-full flex-col gap-6 overflow-scroll p-6">
-      <Button onClick={signout}>Sign Out</Button>
       {!invoices ? (
         <EmptyState
           title="No invoices registered yet"

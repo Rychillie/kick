@@ -17,14 +17,14 @@ export default function UserDropdown({ user }: { user: User | null }) {
     <div className="relative flex items-center justify-center text-left">
       <Popover
         content={
-          <div className="w-full rounded-md bg-white p-2 sm:w-56 dark:bg-black">
+          <div className="w-full rounded-md bg-white p-2 sm:w-56">
             <div className="p-2">
               {user.user_metadata.name && (
-                <p className="truncate text-sm font-medium text-gray-900 dark:text-gray-50">
+                <p className="truncate text-sm font-medium text-gray-900">
                   {user.user_metadata.name}
                 </p>
               )}
-              <p className="truncate text-sm text-gray-500 dark:text-gray-400">
+              <p className="truncate text-sm text-gray-500">
                 {user.user_metadata.email}
               </p>
             </div>
@@ -52,7 +52,7 @@ export default function UserDropdown({ user }: { user: User | null }) {
       >
         <button
           onClick={() => setOpenPopover(!openPopover)}
-          className="flex size-6 items-center justify-center overflow-hidden rounded-full border border-gray-300 outline-none transition-all duration-75 active:scale-95 sm:size-6 dark:border-gray-800"
+          className="flex size-6 items-center justify-center overflow-hidden rounded-full border border-gray-300 outline-none transition-all duration-75 active:scale-95 sm:size-6"
         >
           <Image
             alt={user.user_metadata.name}
