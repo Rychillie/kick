@@ -1,16 +1,8 @@
 import { Test } from '@/components/screns';
 import { EmptyState } from '@/components/ui';
 import { invoices } from '@/constants';
-import { createClient } from '@/lib/supabase/server';
-import { redirect } from 'next/navigation';
 
-export default async function InvoicesPage() {
-  const supabase = await createClient();
-
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {
-    redirect('/');
-  }
+export default function InvoicesPage() {
   // const invoices = null;
 
   return (
