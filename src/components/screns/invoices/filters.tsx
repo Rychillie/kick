@@ -2,6 +2,7 @@
 
 import { Button, Input } from '@/components/elements';
 import { useMediaQuery } from '@/lib/hooks';
+import Link from 'next/link';
 
 export default function Filters() {
   const { isDesktop, device } = useMediaQuery();
@@ -27,7 +28,9 @@ export default function Filters() {
             <Button icon="chevron-down" iconPosition="right" intent="secondary">
               5 entities
             </Button>
-            <Button>Create Invoice</Button>
+            <Link href="/invoices/create">
+              <Button>Create Invoice</Button>
+            </Link>
           </div>
         </>
       ) : (
@@ -47,7 +50,9 @@ export default function Filters() {
             </Button>
           </div>
 
-          <Button className="w-full">Create Invoice</Button>
+          <Link href="/invoices/create">
+            <Button className="w-full">Create Invoice</Button>
+          </Link>
         </>
       )}
     </div>

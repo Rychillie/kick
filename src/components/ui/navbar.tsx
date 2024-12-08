@@ -11,6 +11,8 @@ import UserDropdown from './user-dropdown';
 export default function NavBar({ user }: { user: User | null }) {
   const pathname = usePathname();
 
+  console.log(pathname.split('/')[1]);
+
   const { SignInModal, setShowSignInModal } = useSignInModal();
 
   const routes = [
@@ -42,7 +44,7 @@ export default function NavBar({ user }: { user: User | null }) {
                   key={index}
                   className={c(
                     'transition-all',
-                    pathname === route.path
+                    `/${pathname.split('/')[1]}` === route.path
                       ? 'cursor-default text-gray-900'
                       : 'cursor-pointer hover:text-gray-800'
                   )}
