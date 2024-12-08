@@ -25,13 +25,10 @@ export default function useMediaQuery() {
       setDimensions({ width: window.innerWidth, height: window.innerHeight });
     };
 
-    // Initial detection
     checkDevice();
 
-    // Listener for windows resize
     window.addEventListener('resize', checkDevice);
 
-    // Cleanup listener
     return () => {
       window.removeEventListener('resize', checkDevice);
     };

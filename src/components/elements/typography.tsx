@@ -2,7 +2,6 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import c from 'clsx';
 import React, { ElementType, ReactNode } from 'react';
 
-// Font size definitions based on previous specifications
 const FONT_SIZES = {
   '10': 'text-[10px] leading-[16px] tracking-[-0.5%]',
   '12': 'text-[12px] leading-[18px]',
@@ -19,14 +18,12 @@ const FONT_SIZES = {
   '92': 'text-[92px] leading-[108px] tracking-[-4%]'
 };
 
-// Font weight definitions
 const FONT_WEIGHTS = {
   regular: 'font-normal',
   medium: 'font-medium',
   semibold: 'font-semibold'
 };
 
-// Text variants configuration
 const textVariants = cva([], {
   variants: {
     size: FONT_SIZES,
@@ -38,7 +35,6 @@ const textVariants = cva([], {
   }
 });
 
-// Component props interface
 interface TextProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof textVariants> {
@@ -47,7 +43,6 @@ interface TextProps
   className?: string;
 }
 
-// Text Component
 export default function Text({
   as: Component = 'span',
   children,

@@ -1,4 +1,5 @@
-import { Text } from '@/components/elements';
+import { signin } from '@/actions';
+import { Button, Text } from '@/components/elements';
 
 export default function Home() {
   return (
@@ -6,6 +7,8 @@ export default function Home() {
       <Text as="h1" weight="semibold" size="28">
         Hello world
       </Text>
+
+      <Button onClick={signin}>Sign In with Google</Button>
     </div>
   );
 }
