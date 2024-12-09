@@ -24,7 +24,7 @@ export default function NavBar({ user }: { user: User | null }) {
     <>
       <SignInModal />
       <nav className="fixed inset-x-0 top-0 z-40 w-full bg-white/50 shadow-navbar backdrop-blur-[20px]">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-5">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
           <div className="flex items-center justify-center gap-2">
             <Link
               href="/"

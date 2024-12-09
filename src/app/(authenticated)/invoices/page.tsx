@@ -1,6 +1,8 @@
+import { Button, Text } from '@/components/elements';
 import { Invoices } from '@/components/screns';
 import { EmptyState } from '@/components/ui';
 import { createClient } from '@/lib/supabase/server';
+import Link from 'next/link';
 
 export default async function InvoicesPage() {
   const supabase = await createClient();
@@ -12,7 +14,15 @@ export default async function InvoicesPage() {
     <div className="flex size-full flex-col gap-6 overflow-scroll p-6">
       {invoices && invoices.length >= 1 ? (
         <>
-          <Invoices.Filters />
+          <div className="flex items-center justify-between">
+            <Text as="h1" size="24" weight="semibold">
+              Invoices
+            </Text>
+
+            <Link href="/invoices/create">
+              <Button className="w-full">Create Invoice</Button>
+            </Link>
+          </div>
           <Invoices.Table invoices={invoices} />
         </>
       ) : (

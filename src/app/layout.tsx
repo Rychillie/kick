@@ -1,8 +1,7 @@
-import Nav from '@/components/ui/nav';
 import c from 'clsx';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Suspense, type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import './globals.css';
 
 const inter = Inter({
@@ -18,14 +17,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="size-full bg-white text-black">
-      <body className={c(inter.className, 'size-full antialiased')}>
-        <Suspense>
-          {/* @ts-expect-error Server Component */}
-          <Nav />
-        </Suspense>
-        <main className="mx-auto flex size-full min-h-full max-w-5xl pt-16">
-          {children}
-        </main>
+      <body
+        className={c(inter.className, 'bg-dotted-grid size-full antialiased')}
+      >
+        {children}
       </body>
     </html>
   );
